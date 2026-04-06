@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merahalwai | Caterers, Banquets, and Event Bookings</title>
+    <meta
+      name="description"
+      content="Book premium caterers, banquet halls, and celebration vendors on Merahalwai."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="top-accent-bar"></div>
+    <div class="page-wrap">
+      <header class="site-header">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <a class="brand-text" href="#top">
+            <strong>Mera Halwai</strong>
+            <small>Caterers, banquets, bookings</small>
+          </a>
+        </div>
+
+        <nav class="site-nav">
+          <a href="#listing-shell">Services</a>
+          <a href="#listing-shell">Cuisines</a>
+          <a class="is-active" href="#listing-shell">Vendors</a>
+          <a href="#site-footer">About</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="ghost-button" type="button">Login</button>
+          <button class="primary-button" type="button">Book a Caterer</button>
+        </div>
+      </header>
+
+      <main id="top">
+        <section class="search-stage">
+          <div class="search-shell">
+            <div class="search-grid">
+              <label class="search-field">
+                <span>Event Type</span>
+                <select id="event-select">
+                  <option value="all">All Services</option>
+                  <option value="Wedding Catering">Wedding Catering</option>
+                  <option value="Banquet Hall">Banquet Halls</option>
+                  <option value="Venue + Catering">Venue + Catering</option>
+                  <option value="Corporate Events">Corporate Events</option>
+                </select>
+              </label>
+
+              <label class="search-field">
+                <span>Guests</span>
+                <select id="top-guests-select">
+                  <option value="0">Any size</option>
+                  <option value="100">100+</option>
+                  <option value="300">300+</option>
+                  <option value="500">500+</option>
+                  <option value="1000">1000+</option>
+                </select>
+              </label>
+
+              <label class="search-field">
+                <span>Cuisine</span>
+                <select id="top-cuisine-select">
+                  <option value="all">Any cuisine</option>
+                </select>
+              </label>
+
+              <label class="search-field">
+                <span>Search</span>
+                <input
+                  id="top-search-input"
+                  type="search"
+                  placeholder="Caterer name, banquet hall, cuisine..."
+                />
+              </label>
+
+              <button class="search-button" id="apply-top-search" type="button">
+                Search
+              </button>
+            </div>
+
+            <div class="search-utility-row">
+              <span class="utility-chip">Verified vendors only</span>
+              <span class="utility-chip">Instant callback options</span>
+              <span class="utility-chip">Banquets + caterers</span>
+              <span class="utility-chip">Large guest capacity</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="listing-shell" id="listing-shell">
+          <div class="results-head">
+            <div>
+              <p class="kicker" id="results-kicker">Verified caterers and venues in Jaipur</p>
+              <h2 id="results-heading">Showing curated vendors in Jaipur</h2>
+            </div>
+            <div class="results-toolbar">
+              <div class="trust-pill">Verified pricing and fast callbacks</div>
+              <label class="sort-pill">
+                <span>Sort</span>
+                <select id="sort-select">
+                  <option value="popular">Most Popular</option>
+                  <option value="rating">Highest Rated</option>
+                  <option value="priceLow">Lowest Price</option>
+                  <option value="capacity">Largest Capacity</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="listing-layout">
+            <aside class="filters-card">
+              <div class="filters-header">
+                <h3>Filters</h3>
+                <button class="link-button" id="reset-filters" type="button">Reset</button>
+              </div>
+
+              <section class="filter-section">
+                <div class="filter-title-row">
+                  <h4>Minimum Rating</h4>
+                </div>
+                <div class="pill-grid pill-grid-two">
+                  <button class="filter-pill is-active" data-rating="0" type="button">Any</button>
+                  <button class="filter-pill" data-rating="3.5" type="button">3.5+</button>
+                  <button class="filter-pill" data-rating="4.0" type="button">4.0+</button>
+                  <button class="filter-pill" data-rating="4.5" type="button">4.5+</button>
+                </div>
+              </section>
+
+              <section class="filter-section">
+                <div class="filter-title-row">
+                  <h4>Food Preference</h4>
+                </div>
+                <div class="pill-grid pill-grid-two">
+                  <button class="filter-pill" data-diet="Pure Veg" type="button">Pure Veg</button>
+                  <button class="filter-pill" data-diet="Non-Veg" type="button">Non-Veg</button>
+                </div>
+              </section>
+
+              <section class="filter-section">
+                <div class="filter-title-row">
+                  <h4>Guest Count</h4>
+                </div>
+                <div class="pill-grid pill-grid-three">
+                  <button class="filter-pill" data-guests="under50" type="button">&lt; 50</button>
+                  <button class="filter-pill" data-guests="50-100" type="button">50-100</button>
+                  <button class="filter-pill" data-guests="100-200" type="button">100-200</button>
+                  <button class="filter-pill" data-guests="200-500" type="button">200-500</button>
+                  <button class="filter-pill" data-guests="500-1000" type="button">500-1000</button>
+                  <button class="filter-pill" data-guests="1000+" type="button">1000+</button>
+                </div>
+              </section>
+
+              <section class="filter-section">
+                <div class="filter-title-row">
+                  <h4>Budget Per Plate</h4>
+                </div>
+                <div class="budget-list">
+                  <button class="budget-card" data-budget="under300" type="button">
+                    <strong>Under ₹300</strong>
+                    <span>Budget friendly</span>
+                  </button>
+                  <button class="budget-card" data-budget="300-500" type="button">
+                    <strong>₹300-₹500</strong>
+                    <span>Mid range</span>
+                  </button>
+                  <button class="budget-card" data-budget="500-800" type="button">
+                    <strong>₹500-₹800</strong>
+                    <span>Premium</span>
+                  </button>
+                  <button class="budget-card" data-budget="800+" type="button">
+                    <strong>₹800+</strong>
+                    <span>Luxury</span>
+                  </button>
+                </div>
+              </section>
+
+              <section class="filter-section">
+                <div class="filter-title-row">
+                  <h4>Cuisine</h4>
+                </div>
+                <div class="cuisine-chip-list" id="sidebar-cuisine-list"></div>
+              </section>
+            </aside>
+
+            <section class="results-column">
+              <div class="active-filter-row" id="active-filter-row"></div>
+              <div class="vendor-list" id="vendor-list"></div>
+
+              <div class="empty-state hidden" id="empty-state">
+                <h3>No vendors match all of these filters.</h3>
+                <p>Reset one or two filters to unlock more caterers and banquet spaces.</p>
+                <button class="primary-button" id="empty-reset-button" type="button">
+                  Reset Filters
+                </button>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer" id="site-footer">
+        <div class="footer-brand">
+          <div class="brand-lockup brand-lockup-footer">
+            <div class="brand-mark" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="brand-text">
+              <strong>Mera Halwai</strong>
+              <small>Jaipur's trusted booking platform</small>
+            </div>
+          </div>
+          <p>
+            Book verified halwais, caterers, banquet halls, and event-ready food
+            experiences with transparent pricing and better response times.
+          </p>
+          <div class="footer-contact">
+            <span>+91 123 456 7890</span>
+            <span>hello@merahalwai.com</span>
+            <span>Jaipur, Rajasthan</span>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Discover</h4>
+          <a href="#listing-shell">Find Caterers</a>
+          <a href="#listing-shell">Wedding Catering</a>
+          <a href="#listing-shell">Corporate Events</a>
+          <a href="#listing-shell">Birthday Parties</a>
+          <a href="#listing-shell">Banquet Halls</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Cuisines</h4>
+          <a href="#listing-shell">Rajasthani</a>
+          <a href="#listing-shell">North Indian</a>
+          <a href="#listing-shell">Mughlai</a>
+          <a href="#listing-shell">South Indian</a>
+          <a href="#listing-shell">Chaat & Snacks</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Company</h4>
+          <a href="#site-footer">About Us</a>
+          <a href="#site-footer">How It Works</a>
+          <a href="#site-footer">Trust & Safety</a>
+          <a href="#site-footer">Help Center</a>
+          <a href="#site-footer">Privacy Policy</a>
+        </div>
+      </footer>
+    </div>
+
+    <div class="drawer-backdrop hidden" id="drawer-backdrop"></div>
+    <aside class="profile-drawer hidden" id="profile-drawer" aria-hidden="true">
+      <button class="drawer-close" id="drawer-close" type="button">Close</button>
+      <div id="drawer-content"></div>
+    </aside>
+
+    <script src="script.js"></script>
+  </body>
+</html>
